@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #4F4E52;
+  color: #f1f5f9;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .section-label {
+    @apply text-xs font-semibold tracking-[0.2em] uppercase text-accent-light mb-3;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400 bg-clip-text text-transparent;
+  }
+
+  .btn-gradient {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold text-white
+      bg-gradient-to-r from-blue-500 via-indigo-500 to-violet-500
+      hover:opacity-90 transition-opacity shadow-glow;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold
+      text-text border border-border bg-transparent
+      hover:border-accent-light hover:bg-white/5 transition-all;
+  }
+
+  .card {
+    @apply rounded-xl border border-border bg-surface p-5 transition-colors hover:border-accent/40;
+  }
+
+  .tag {
+    @apply text-xs px-2.5 py-1 rounded-md bg-surface-2 text-muted border border-border;
+  }
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
