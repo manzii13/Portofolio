@@ -89,6 +89,30 @@ const projects: Project[] = [
     iconColor: '#10b981',
     featured: true,
   },
+  {
+    id: 6,
+    title: 'AM-TECH',
+    desc: 'Online tech store built with React and TypeScript — product catalog, shopping experience, and a responsive storefront.',
+    tags: ['React', 'TypeScript', 'Vite', 'CSS'],
+    category: 'frontend',
+    demo: 'https://am-techh.netlify.app/',
+    github: 'https://github.com/manzii13/AM-TECH.git',
+    image: '/AM-TECHLogo.png',
+    iconColor: '#3b82f6',
+    featured: true,
+  },
+  {
+    id: 7,
+    title: 'AmiraScents',
+    desc: 'Luxury perfume brand website with hero carousel, product catalog, cart UI, and contact form — built with vanilla HTML, CSS, and JavaScript.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    category: 'frontend',
+    demo: 'https://amirascents.netlify.app/',
+    github: 'https://github.com/manzii13/AmiraScents.git',
+    image: '/amirascents.png',
+    iconColor: '#d97706',
+    featured: true,
+  },
 ]
 
 const filters: { key: Category; label: string }[] = [

@@ -11,7 +11,7 @@ const fadeUp = (delay: number) => ({
 
 const stats = [
   { icon: Calendar, value: '2+', label: 'Years experience' },
-  { icon: Code2, value: '6+', label: 'Projects completed' },
+  { icon: Code2, value: '7+', label: 'Projects completed' },
   { icon: Users, value: '10+', label: 'Happy clients' },
   { icon: Star, value: '5★', label: 'Client rating' },
 ]
