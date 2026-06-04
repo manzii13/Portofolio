@@ -28,6 +28,37 @@ const socials = [
 
 const sectionIds = navLinks.map((l) => l.href.slice(1))
 
+function BrandLogo({ size = 'md' }: { size?: 'sm' | 'md' }) {
+  const imgHeight = size === 'sm' ? 'h-9' : 'h-11'
+
+  return (
+    <a
+      href="#home"
+      aria-label="Manzi Arsene — Home"
+      className="group inline-flex items-center rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+    >
+      <span
+        className={`relative inline-flex items-center justify-center overflow-hidden rounded-xl
+          bg-[#070b14] ring-1 ring-white/10 shadow-card
+          transition-all duration-300 ease-out
+          group-hover:ring-accent/45 group-hover:shadow-glow
+          group-hover:scale-[1.02] active:scale-[0.98]`}
+      >
+        <span
+          className="pointer-events-none absolute inset-0 bg-gradient-to-br from-blue-500/25 via-indigo-500/15 to-violet-500/25 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          aria-hidden
+        />
+        <img
+          src="/MALogo.png"
+          alt="Manzi Arsene"
+          draggable={false}
+          className={`relative ${imgHeight} w-auto object-contain px-1.5 py-1`}
+        />
+      </span>
+    </a>
+  )
+}
+
 export default function Navbar() {
   const [active, setActive] = useState('home')
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -51,10 +82,8 @@ export default function Navbar() {
 
   const NavContent = () => (
     <>
-      <div className="px-6 py-8">
-        <a href="#home" className="text-2xl font-bold tracking-tight text-text">
-          MA
-        </a>
+      <div className="px-6 py-7">
+        <BrandLogo />
       </div>
 
       <nav className="flex-1 px-4">
@@ -124,7 +153,7 @@ export default function Navbar() {
       {/* Mobile top bar */}
       <header className="lg:hidden sticky top-0 z-50 flex items-center justify-between px-5 h-14
         border-b border-border bg-bg/90 backdrop-blur-md">
-        <a href="#home" className="text-xl font-bold">MA</a>
+        <BrandLogo size="sm" />
         <button
           type="button"
           onClick={() => setMobileOpen((o) => !o)}
